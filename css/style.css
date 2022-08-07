@@ -83,6 +83,7 @@ nav{
 
 .banner{
     height:calc(100vh-80px);
+    min-height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
@@ -198,4 +199,44 @@ footer{
     justify-content: center;
     align-items: center;
     color: rgba(0, 0,0,.6);
+}
+
+/* medai quary */
+
+
+@media(max-width:950px) {
+
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media(max-width:805px){
+
+    .banner{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .banner-left{
+        order: 2;
+        padding: 50px 0;
+    }
+    .feature{
+        grid-template-columns: 1fr;
+
+    }
+    .gallery{
+        grid-template-columns: 1fr
+    }
+    .photo{
+        text-align: center;
+    }
+    .photo img{
+        max-width: 350px;
+        
+    }
+    .contact{
+        grid-template-columns: 1fr;
+    }
 }
